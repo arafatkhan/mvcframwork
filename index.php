@@ -10,26 +10,21 @@
 
     if ( $url != NULL ) {
        $url = rtrim( $url,'/');
-       $url = explode('/', $url);
+       $url = explode('/', filter_var($url,FILTER_SANITIZE_URL ));
 
     } else {
       unset($url);
     }
-    
 
-  
-
-
-
-   if (isset($url[0])) {
+    if (isset($url[0])) {
      include ('apps/controllers/'.$url[0].'.php');
-     $arafat = new $url[0]();
+     $ctrl = new $url[0]();
 
      if (isset($url[2])) {
-       $arafat->$url[1]($url[2]);
+       $ctrl->$url[1]($url[2]);
      } else {
        if (isset($url[1])) {
-         $arafat->$url[1]();
+         $ctrl->$url[1]();
        } else {
          # code...
        }
@@ -37,7 +32,9 @@
      }
      
    } else {
-     # code...
+     include "apps/controllers/Index.php";
+     $ctrl = new Index();
+     $ctrl -> home();
    }
    
   
