@@ -6,10 +6,13 @@
  class Acontroller
  {
  	
+ 		protected $load = array();
+
  	function __construct()
  	{
- 		//echo "from parent controller";
+ 		$this->load = new Load();
  	}
+ 	
  }
 
 

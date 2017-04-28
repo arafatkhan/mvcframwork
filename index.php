@@ -1,9 +1,10 @@
-<?php include "inc/header.php"; ?>
+
 
 <?php 
 
   include_once("system/lib/Main.php");
   include_once("system/lib/Acontroller.php");
+  include_once("system/lib/Load.php");
 
     
    $url = isset($_GET['url']) ? $_GET['url'] : NULL;
@@ -89,4 +90,3 @@
 
 
 
-<?php include "inc/footer.php"; ?>

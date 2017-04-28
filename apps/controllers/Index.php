@@ -14,7 +14,7 @@
 
 		public function home()
 		{
-			echo "This is come form home Method";
+			$this->load->view('home');
 		}
 	}
 
