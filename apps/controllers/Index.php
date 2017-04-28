@@ -16,6 +16,15 @@
 		{
 			$this->load->view('home');
 		}
+
+        public function category()	
+        {
+        	$data = array();
+        	$cateModel = $this->load->model('CatModel');
+        	$data['cat'] = $cateModel-> catList();
+        	$this->load->view('category', $data);
+        }
+
 	}
 
 
