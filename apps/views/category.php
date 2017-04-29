@@ -45,12 +45,9 @@ input[type="submit"]{cursor: pointer}
 					<hr />
 
 					<?php 
-						foreach ($data as $key) {
-							echo $key['CatOne']."<br />";
-							echo $key['catTwo']."<br />";
-							echo $key['catThree']."<br />";
-							echo $key['catFour']."<br />";
-						}
+					 foreach ($cat as $key => $value) {
+					 	echo $value['name'].'<br />';
+					 }
 
 					 ?>
 

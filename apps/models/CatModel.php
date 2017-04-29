@@ -3,24 +3,20 @@
 	/**
 	* Category Model
 	*/
-	class CatModel 
+	class CatModel extends Amodel 
 	{
 		
 		public function __construct()
 		{
-			//echo "Category Model";
+			parent::__construct();
 		}
 
 		public function catList()
 		{
-			return array(
-
-				'CatOne'   =>    'Education',
-				'catTwo'   =>    'Sports',
-				'catThree' =>    'Travel',
-				'catFour'  =>    'International'
-
-				 );
+			$sql = "SELECT * FROM category";
+			$query = $this->db->query($sql);
+            $result = $query->fetchAll();
+            return $result;
 		}
 	}
 

@@ -4,6 +4,8 @@
 
   include_once("system/lib/Main.php");
   include_once("system/lib/Acontroller.php");
+  include_once("system/lib/Amodel.php");
+  include_once("system/lib/Database.php");
   include_once("system/lib/Load.php");
 
     
