@@ -9,8 +9,14 @@
  	
  	public function __construct()
  	{
- 		$this->db = new Database();
+ 		$dsn = 'mysql:dbname=db_mvc; host=localhost';
+ 		$user = 'root';
+ 		$pass = '';
+ 		
+ 		$this->db = new Database($dsn, $user,$pass);
  	}
+
+ 	
  }
 
  ?>
